@@ -1,0 +1,41 @@
+html {
+    --color-primario-50: hsl(0 100% 94.1%);
+    --color-primario-100: hsl(0 100% 89%);
+    --color-primario-200: hsl(0 100% 75.9%);
+    --color-primario-300: hsl(0 100% 54.7%);
+    --color-primario-400: hsl(0 100% 36.9%);
+    --color-primario-500: hsl(0 100% 23.5%);
+    --color-primario-600: hsl(0 100% 19.8%);
+    --color-primario-700: hsl(0 100% 15.9%);
+    --color-primario-800: hsl(0 100% 12%);
+    --color-primario-900: hsl(0 100% 8.8%);
+    --color-primario-950: hsl(0 100% 5.1%);
+
+    --color-secundario-50: hsl(212.3 100% 92.4%);
+    --color-secundario-100: hsl(209.6 100% 83.7%);
+    --color-secundario-200: hsl(198.1 100% 48.6%);
+    --color-secundario-300: hsl(198.6 100% 36.7%);
+    --color-secundario-400: hsl(199.1 100% 25.3%);
+    --color-secundario-500: hsl(200.5 100% 14.3%);
+    --color-secundario-600: hsl(201 100% 12.4%);
+    --color-secundario-700: hsl(201.6 100% 9.8%);
+    --color-secundario-800: hsl(204.6 100% 7.6%);
+    --color-secundario-900: hsl(205.7 100% 5.5%);
+    --color-secundario-950: hsl(211.8 100% 3.3%);
+
+    --color-fondo-50: hsl(0 0% 100%);
+    --color-fondo-100: hsl(37.5 100% 98.4%);
+    --color-fondo-200: hsl(41.2 88.9% 96.5%);
+    --color-fondo-300: hsl(40 92.3% 94.9%);
+    --color-fondo-400: hsl(41.2 88.9% 92.9%);
+    --color-fondo-500: hsl(40.5 90.9% 91.4%);
+    --color-fondo-600: hsl(40 92.7% 89.2%);
+    --color-fondo-700: hsl(41.3 91% 86.9%);
+    --color-fondo-800: hsl(41.4 92.2% 84.9%);
+    --color-fondo-900: hsl(41.9 93.3% 82.5%);
+    --color-fondo-950: hsl(41.9 93.3% 82.5%);
+}
+
+html {
+    background: var(--color-fondo-100);
+}

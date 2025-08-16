@@ -1,0 +1,42 @@
+/* asegurar que la pagina mida igual de alto que la ventana */
+html,
+body {
+    height: 100%;
+}
+
+/* se vuelve la pagina completa una columna */
+html {
+    display: flex;
+    flex-direction: column;
+}
+
+label,
+input {
+    display: block;
+    margin-bottom: 8px;
+}
+
+input {
+    box-sizing: border-box;
+    border: none;
+    background-color: var(--color-fondo-600);
+    padding: 4px 8px;
+    width: 100%;
+}
+
+a {
+    color: var(--color-primario-500);
+    text-decoration: 2px solid underline;
+    text-underline-offset: 3px;
+}
+
+select {
+    background-color: var(--color-fondo-600);
+    border: none;
+    padding: 4px 8px;
+    width: 100%;
+}
+
+label {
+    text-transform: capitalize;
+}

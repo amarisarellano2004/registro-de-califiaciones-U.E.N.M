@@ -1,0 +1,30 @@
+.mensaje {
+    display: flex;
+    gap: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    list-style: none;
+    padding: 14px;
+    animation: mover-abajo 500ms forwards;
+}
+.mensaje svg {
+    min-height: 24px;
+    min-width: 24px;
+}
+
+.mensaje.error {
+    background: red;
+    color: white;
+}
+
+.mensaje.exito {
+    background-color: green;
+    color: white;
+}
+
+#bonton-x {
+    margin-left: auto;
+    margin-bottom: auto;
+}

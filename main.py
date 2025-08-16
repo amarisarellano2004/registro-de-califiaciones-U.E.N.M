@@ -1,4 +1,5 @@
 from flask import Flask
+from livereload import Server
 from ventana import abrir_ventana
 import sys
 from typing import Callable
@@ -9,11 +10,20 @@ PUERTO = 5000
 app = Flask(__name__,  static_url_path="/")
 
 def correr_servidor():
-      app.run(
-            host="0.0.0.0",
-            #debug=True,
-            port=PUERTO,
-        )
+    servidor = Server(app.wsgi_app)
+    servidor.watch('*/**')
+    servidor.serve(
+        port=PUERTO,
+        host="0.0.0.0",
+    )
+
+    """
+    app.run(
+        host="0.0.0.0",
+        debug=True,
+        port=PUERTO,
+    )
+    """
 
 def iniciar_flask_en_hilo(evento_listo):
     try:

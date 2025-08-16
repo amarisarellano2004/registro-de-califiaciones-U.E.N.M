@@ -1,0 +1,19 @@
+.boton-primario {
+    width: 100%;
+    background-color: var(--color-primario-500);
+    color: bisque;
+    padding: 8px 16px;
+    border: none;
+    margin-top: 24px;
+    transition: background-color 200ms;
+    font-weight: 700;
+    font-size: 17px;
+}
+
+.boton-primario:hover {
+    background-color: var(--color-primario-600);
+}
+
+.boton-primario:active {
+    background: var(--color-primario-400);
+}

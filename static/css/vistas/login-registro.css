@@ -1,0 +1,56 @@
+.contenedor-todo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 24px;
+    height: 100%;
+    width: 300px;
+    margin: 0 auto;
+}
+
+#logo-login-registro {
+    /* position: absolute; */
+    top: 0;
+    left: 0;
+    height: 200px;
+    width: 200px;
+    margin: 0 auto;
+}
+
+#titulo-contenedor {
+    margin-bottom: 24px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 22px;
+}
+
+.contenedor-campos {
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+    /* border: 1px solid; */
+    border-radius: 6px;
+    padding: 16px;
+    background: var(--color-fondo-300);
+}
+#contenedor-botones {
+    text-align: center;
+}
+@media screen and (min-width: 800px) {
+    .contenedor-todo {
+        flex-direction: row;
+        height: auto;
+        margin: auto;
+        width: 700px;
+    }
+
+    .contenedor-campos {
+        width: 400px;
+    }
+
+    #logo-login-registro {
+        margin: auto;
+        height: 300px;
+        width: 300px;
+    }
+}

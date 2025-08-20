@@ -4,43 +4,14 @@ from ventana import abrir_ventana
 import sys
 from typing import Callable
 from threading import Thread, Event
-
-PUERTO = 5000
+from rutas import rutas
 
 app = Flask(__name__,  static_url_path="/")
 
 app.config['SECRET_KEY'] ='1234'
 app.debug = True
 
-@app.route('/login', methods=['GET','POST'])
-def login():
-    if request.method == 'POST':
-        print(request.form)
-        datos = (request.form)
-
-        if len(datos ["usuario"]) < 8:
-            flash("El usuario debe contener al menos 8 caracteres", 'error')
-        elif len(datos["contraseña"]) < 5:
-            flash('La contraseña debe contener al menos 5 caracteres', "error")
-        else:
-            flash("Ha iniciado sesion con exito ","exito")
-
-    return render_template('login.html')
-
-@app.route('/registro', methods =['GET','POST'])
-def registro():
-    if request.method == 'POST':
-        datos = (request.form)
-
-        if len(datos ["usuario"]) < 8:
-            flash("El usuario debe contener al menos 8 caracteres", 'error')
-        elif len(datos["contraseña"]) < 5:
-            flash('La contraseña debe contener al menos 5 caracteres', "error")
-        else:
-            flash("Los datos han sido guardado con exito","exito")
-
-    return render_template('registro.html')
-
+app.register_blueprint(rutas)
 
 def correr_servidor():
     servidor = Server(app.wsgi_app)

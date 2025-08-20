@@ -1,22 +1,29 @@
-{% extends 'base.html' %} {% block cabeza %}
-<link
-    rel="stylesheet"
-    href="{{ url_for('static', filename='css/vistas/login-registro.css') }}"
-/>
-{% endblock %} {% block contenido %}
-<h1 id="titulo-contenedor">INICIAR SESION</h1>
+{% extends 'login-registro.html' %}
 
-<form method="post">
+{% block campos %}
+
+<form
+    class="contenedor-campos"
+    method="post">
+<h1 id="titulo-contenedor">INICIAR SESION</h1>
     <div>
         <label for="usuario">ingresar usuario</label>
-        <input name="usuario" id="usuario" type="text" maxlength="10" />
+        <input
+            name="usuario"
+            id="usuario"
+            type="text"
+            value="{{ datos["usuario"] }}"
+            minlength="{{ NOMBRE_MINIMO }}"
+            maxlength="{{NOMBRE_MAXIMO}}"
+        />
         <label for="contraseña"> ingresar contraseña</label>
         <input
             name="contraseña"
             id="contraseña"
             type="password"
-            minlength="5"
-            maxlength="8"
+            value="{{datos ["contraseña"] }}"
+            minlength="{{CONTRASEÑA_MINIMO}}"
+            maxlength="{{CONTRASEÑA_MAXIMA}}"
         />
     </div>
     <div id="contenedor-botones">

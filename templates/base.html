@@ -23,12 +23,9 @@
         <link rel="stylesheet" href="css/global.css" />
         {% block cabeza %}{% endblock%}
     </head>
-    <body class="contenedor-todo">
-        <img id="logo-login-registro" src="imagenes/logo.png" alt="" />
-
-        <section class="contenedor-campos">
-            {% block contenido %}{% endblock %}
-        </section>
+    <body>
+        {% block contenido %}
+        {% endblock %}
 
         {% with mensajes = get_flashed_messages(with_categories=true) %} {% if
         mensajes %} {% for categoria, mensaje in mensajes %}

@@ -1,0 +1,11 @@
+{% extends 'base.html' %} {% block cabeza %}
+<link
+    rel="stylesheet"
+    href="{{ url_for('static', filename='css/vistas/login-registro.css') }}"
+/>
+{% endblock %} {% block contenido %}
+<section class="contenedor-todo">
+    <img id="logo-login-registro" src="imagenes/logo.png" alt="" />
+    {% block campos %}{% endblock %}
+</section>
+{% endblock %}

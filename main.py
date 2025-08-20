@@ -5,8 +5,10 @@ import sys
 from typing import Callable
 from threading import Thread, Event
 from rutas import rutas
+from flask_bcrypt import Bcrypt
 
 app = Flask(__name__,  static_url_path="/")
+encriptado = Bcrypt(app)
 
 app.config['SECRET_KEY'] ='1234'
 app.debug = True

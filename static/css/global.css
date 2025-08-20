@@ -40,3 +40,25 @@ select {
 label {
     text-transform: capitalize;
 }
+
+footer {
+    background-color: var(--color-secundario-400);
+    color: white;
+}
+
+.fila-qr {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    font-size: 14px;
+    width: 100%;
+}
+
+#qr {
+    height: 50px;
+    width: 50px;
+    margin-left: auto;
+    filter: invert(100%);
+}

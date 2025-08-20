@@ -94,6 +94,13 @@
         </div>
         {% endfor %} {% endif %} {% endwith %}
     </body>
+
+    <footer>
+        <div class="fila-qr">
+        <p>Para acceder a la pagina escanea lo siguiente: </p>
+        <img id="qr" src="{{url_for("static",filename="qr.svg")}}">
+            <div>
+    </footer>
+
     <script src="js/mensajes.js"></script>
-    <script src="s.js"></script>
 </html>

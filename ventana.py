@@ -1,11 +1,25 @@
 from tkinter import Tk, messagebox, ttk
 from webbrowser import open
 import socket
+import qrcode
+import qrcode.image.svg
+from PIL import ImageTk, Image,ImageDraw,ImageFont
+import os
 
 hostname = socket.gethostname()
 ip = socket.gethostbyname(hostname)
 
 LAN = not ip.startswith("127")
+
+def generar_imagen_qr():
+    from main import PUERTO
+
+    url = f'http://{ip}:{PUERTO}'
+
+    png = qrcode.make(url)
+    png.save('static/qr.png')
+    svg = qrcode.make(url, image_factory=qrcode.image.svg.SvgPathImage)
+    svg.save('static/qr.svg')
 
 
 def abrir_navegador(label):
@@ -19,7 +33,7 @@ def abrir_navegador(label):
 
 def abrir_ventana():
     from main import PUERTO
-    
+
     ventana = Tk()
     ventana.title("Registro Comunal")
     ventana.resizable(False, False)
@@ -75,5 +89,10 @@ def abrir_ventana():
             cursor="hand2",
             font=("Segoe UI", 14, "underline", "bold"),
         ).pack(pady=10)
+
+        img = Image.open('static/qr.png')
+        qr = ImageTk.PhotoImage(img)
+        panel = ttk.Label(f, image=qr)
+        panel.pack(pady=(10,0))
 
     root.mainloop()

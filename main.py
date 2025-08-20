@@ -1,6 +1,6 @@
 from flask import Flask
 from livereload import Server
-from ventana import abrir_ventana
+from ventana import abrir_ventana, generar_imagen_qr
 import sys
 from typing import Callable
 from threading import Thread, Event
@@ -43,6 +43,8 @@ def iniciar_flask_en_hilo(evento_listo):
         sys.exit(1)
 
 if __name__ == "__main__":
+    generar_imagen_qr()
+
     # Se crea un evento para indicar que el inicio del backend se ha completado
     backend_listo = Event()
 

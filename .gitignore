@@ -45,3 +45,6 @@ draft/
 *.log
 *.pdf
 *.docx
+
+qr.png
+qr.svg

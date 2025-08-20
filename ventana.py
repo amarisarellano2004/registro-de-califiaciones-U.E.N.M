@@ -35,7 +35,7 @@ def abrir_ventana():
     from main import PUERTO
 
     ventana = Tk()
-    ventana.title("Registro Comunal")
+    ventana.title("Registro de calificaciones - Liceo Mijaguas")
     ventana.resizable(False, False)
     ventana.configure()
 

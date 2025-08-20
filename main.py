@@ -6,6 +6,7 @@ from typing import Callable
 from threading import Thread, Event
 from rutas import rutas
 from flask_bcrypt import Bcrypt
+from constantes import PUERTO
 
 app = Flask(__name__,  static_url_path="/")
 encriptado = Bcrypt(app)

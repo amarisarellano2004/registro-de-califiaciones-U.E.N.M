@@ -34,7 +34,6 @@ pip-delete-this-directory.txt
 
 # SQLite databases
 *.db
-db/*
 
 # bundle de la app
 backend/estatico/
